@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./home.css" />
+    <title>Notes</title>
+</head>
+<body>
+    <header class="topbar">
+    <div class="topbar-left">
+      <button class="menu-item" type="button"></button>
+      <button class="menu-item" type="button"></button>
+      <button class="menu-item" type="button"></button>
+    </div>
+
+    <div class="topbar-center">
+      <h1 class="app-title">Notes</h1>
+    </div>
+
+    <div class="topbar-right window-controls">
+        <button class="win-btn win-min" id="minBtn" type="button" aria-label="Minimize"></button>
+        <button class="win-btn win-max" id="maxBtn" type="button" aria-label="Maximize"></button>
+        <button class="win-btn win-close" id="closeBtn" type="button" aria-label="Close"></button>
+    </div>
+  </header>
+    <div class="app">
+    <aside class="sidebar">
+      
+      <div class="sidebar-header">
+        <input id="searchInput" type="search" placeholder="Search notes..." />
+        <button id="newNoteBtn" type="button" aria-label="New note">+</button>
+      </div>
+
+      <ul id="notesList"></ul>
+      <div class="sidebar-footer" id="sidebarFooter">
+      <span id="dateInfo">--</span>
+      <span class="dot-sep">•</span>
+      <span id="timeInfo">--</span>
+    </div>
+    </aside>
+    <div
+        id="sidebarResizer"
+        class="sidebar-resizer"
+        role="separator"
+        aria-label="Resize sidebar"
+        aria-orientation="vertical"
+      >
+    </div>
+    <main class="editor no-selection" id="editorPanel">
+        <p id="emptyState">Select a note from the left panel to start writing.</p>
+        <div id="noteHeader" style="display:none">
+            <div id="noteMeta">
+                <h2 id="noteTitle"></h2>
+                <div id="noteTags" class="note-tags"></div>
+            </div>
+            <button id="editBtn" type="button">Edit</button>
+        </div>
+        <p id="noteContent" style="display:none;" readonly></p>
+    </main>
+  </div>
+  <script src="./home.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create a new note</title>
+  <link rel="stylesheet" href="./form.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-left">
+      <span class="window-title" id="formWindowTitle">Create Note</span>
+    </div>
+
+    <div class="topbar-center">
+      <h1 class="app-title">Notes</h1>
+    </div>
+
+    <div class="topbar-right window-controls">
+      <button class="win-btn win-min" id="minBtn" type="button" aria-label="Minimize"></button>
+      <button class="win-btn win-max" id="maxBtn" type="button" aria-label="Maximize"></button>
+      <button class="win-btn win-close" id="closeBtn" type="button" aria-label="Close"></button>
+    </div>
+  </header>
+
+  <main>
+    <h2 id="formHeading">Create New Note</h2>
+
+    <form id="createNoteForm">
+      <div>
+        <label for="noteTitle">Title</label><br />
+        <input
+          id="noteTitle"
+          name="title"
+          type="text"
+          placeholder="Enter note title"
+          required
+        />
+      </div>
+
+      <fieldset>
+        <legend>Tags (maximum 3)</legend>
+
+        <div>
+          <label for="tag1">Tag 1</label><br />
+          <input id="tag1" name="tags[]" type="text" placeholder="e.g. work" />
+        </div>
+
+        <div>
+          <label for="tag2">Tag 2</label><br />
+          <input id="tag2" name="tags[]" type="text" placeholder="e.g. personal" />
+        </div>
+
+        <div>
+          <label for="tag3">Tag 3</label><br />
+          <input id="tag3" name="tags[]" type="text" placeholder="e.g. urgent" />
+        </div>
+      </fieldset>
+
+      <button id="submitBtn" type="submit">Submit</button>
+    </form>
+  </main>
+
+  <script src="./form.js"></script>
+</body>
+</html>
